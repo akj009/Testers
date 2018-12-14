@@ -1,0 +1,4 @@
+consumer_events=projects/insights-sandbox-153010/subscriptions/one_view_subs_dev
+service_events=projects/insights-sandbox-153010/subscriptions/one_view_service_subs_dev
+billing_engine_events=projects/insights-sandbox-153010/subscriptions/one_view_be_subs_dev
+segment_events=projects/insights-sandbox-153010/subscriptions/one_view_segment_subs_dev
