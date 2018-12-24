@@ -1,4 +1,3 @@
-
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -41,36 +40,39 @@ public class MaxMinNumber {
   }
 
   private static int getAbsentMax(TreeMap<String, Integer> inputMap) {
-    int maxAbsent = 1;
+    int maxAbsent1 = 1, maxAbsent2 = 1;
     for (Map.Entry<String, Integer> integerEntry : inputMap.entrySet()) {
       int l1 = Integer.parseInt(integerEntry.getKey().split(":")[0]);
       int l2 = integerEntry.getValue();
-      int tmp = maxAbsent;
-      if (maxAbsent == l1) {
-        maxAbsent = l1 + 1;
+      if (maxAbsent1 == l1) {
+        maxAbsent1 = l1 + 1;
       }
-      if (tmp == l2) {
-        tmp = l2 + 1;
+      if (maxAbsent2 == l2) {
+        maxAbsent2 = l2 + 1;
       }
-      maxAbsent = Math.max(tmp, maxAbsent);
+
+      maxAbsent1 = Math.max(maxAbsent2, maxAbsent1);
     }
-    return maxAbsent;
+    return maxAbsent1;
   }
 
   public static void main(String[] args) {
     int A[] = {1, 2, 4, 3}, B[] = {1, 3, 2, 3};
     System.out.println(solution2(A, B));
 
-//    int C[] = {4, 2, 1, 6, 5}, D[] = {3, 2, 1, 7, 7};
-//    System.out.println(solution2(C, D));
-//
-//    int E[] = {2, 3}, F[] = {2, 3};
-//    System.out.println(solution2(E, F));
-//
-//    int G[] = {1, 1}, H[] = {2, 1};
-//    System.out.println(solution2(G, H));
+    int C[] = {4, 2, 1, 6, 5}, D[] = {3, 2, 1, 7, 7};
+    System.out.println(solution2(C, D));
 
-      int I[] = {1, 1}, J[] = {2, 2};
-      System.out.println(solution2(I, J));
+    int E[] = {2, 3}, F[] = {2, 3};
+    System.out.println(solution2(E, F));
+
+    int G[] = {1, 1}, H[] = {2, 1};
+    System.out.println(solution2(G, H));
+
+    int I[] = {1, 1}, J[] = {2, 2};
+    System.out.println(solution2(I, J));
+
+    int K[] = {1}, L[] = {2};
+    System.out.println(solution2(K, L));
   }
 }

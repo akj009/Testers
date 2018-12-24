@@ -5,7 +5,7 @@ public class Test {
     static int N = 1000000;
 
     public static void main(String[] args) throws Exception {
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 10; i++) {
             int length = (i == 0) ? 1 : i * 5;
             System.out.print(length + "\t");
             System.out.print(doTest(new LinkedBlockingQueue<>(length), N) + "\t");
