@@ -1,6 +1,7 @@
 package models;
 
 import java.util.LinkedList;
+import java.util.NoSuchElementException;
 
 public class Stack<T> {
 
@@ -11,7 +12,11 @@ public class Stack<T> {
     }
 
     public T peek() {
-        return stack.getLast();
+        try {
+            return stack.getLast();
+        } catch (NoSuchElementException e) {
+            return null;
+        }
     }
 
     public T pop() {

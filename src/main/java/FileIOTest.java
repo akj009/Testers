@@ -9,13 +9,14 @@ import java.util.Scanner;
 
 public class FileIOTest {
   public static void main(String[] args) throws IOException, ClassNotFoundException {
-    /*System.out.println(":::: started:");
+    System.out.println(":::: started:");
+    System.out.println(":::: current directory: " + System.getProperty("user.dir"));
     Path p = Paths.get("src/main/resources/prod.mapping");
     System.out.println(p);
-    System.out.println(Files.readAllLines(p));*/
+    System.out.println(Files.readAllLines(p));
 
 //    test1();
-    writeMapInFile();
+    // writeMapInFile();
 //    readMapFromFile();
   }
 
